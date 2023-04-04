@@ -3,6 +3,7 @@
     --text-color: blue;
     --color: #0065FC;
     --color-gris:#F2F2F2;
+    --shadow: rgba(0, 0, 0, 0.35);
 }
 
 *
@@ -16,17 +17,17 @@ body
     padding: 0;
     border: 0;
     text-decoration: none;
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left: 180px;
+    padding-right: 180px;
 }
 
 /*-----HEADER-----*/
 
 #logo
 {
-    width: 60px;
-    height: 20px;
-    padding:45px 45px 45px 0px;
+    height: 30px;
+    width: 100px;
+    padding:45px 45px 20px 0px;
     text-align: left;
 }
 
@@ -35,7 +36,6 @@ body
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 50px;
 }
 
 #lien_header ul
@@ -55,21 +55,27 @@ body
     margin-right: 60px;
 }
 
-#lien_header li:hover {
+#lien_header li:hover
+{
     border-top: 2px solid var(--color);
+}
+
+#lien_header a:hover
+{
+    color: var(--color);
 }
 
 #lien_header a
 {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 19px;
     text-align: center;
     text-decoration: none;
     color: black;
 }
 
-h5
+h3
 {
     margin-bottom: 20px;
     font-weight: normal;
@@ -105,14 +111,22 @@ h5
 {
     display: flex;
     height: auto;
-    width: auto;
+    width: 170px;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: var(--color);
-    border-radius: 0% 10% 10% 0%;
+    border-radius: 0px 15px 15px 0px;
     border: 1px solid var(--color);
     font-weight: bolder;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.button_search:hover
+{
+    background-color: white;
+    color: var(--color);
 }
 
 .filters
@@ -140,11 +154,14 @@ h5
     border: 1px solid gray;
     border-radius: 25px;
     padding: 20px;
+    transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .filters li:hover
 {
     background-color: rgb(178, 178, 255);
+    transform: scale(1.2);
 }
 
 .text_filters
@@ -199,15 +216,17 @@ h5
 .front_page
 {
     margin-right: 40px;
+    height: auto;
 }
 
 .right_page
 {
     margin-right: 20px;
+    height: auto;
 }
 .front_page, .right_page
 {
-    padding: 30px;
+    padding-left: 30px;
     background-color: rgb(238, 238, 238);
     border-radius: 25px;
 }
@@ -233,10 +252,17 @@ h5
     border: 1px solid white;
     border-radius: 25px;
     margin-bottom: 30px;
-    margin-right: 80px;
-    min-width: 250px;
+    margin-right: 30px;
+    width: 250px;
     height: 200px;
-    box-shadow: 0px 3px 15px black;
+    box-shadow: var(--shadow) 0px 5px 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.box:hover
+{
+    transform: scale(1.05);
 }
 
 .box img
@@ -248,7 +274,7 @@ h5
     object-fit: cover;
 }
 
-.box h4, p
+.box h5, p
 {
     margin: 0;
     padding-left: 10px;
@@ -265,6 +291,12 @@ h5
 {
     padding-left: 10px;
     color: var(--color);
+}
+
+.aff_plus
+{
+    display: flex;
+    margin-bottom: 30px;
 }
 
 /*----SEPARATION----*/
@@ -289,20 +321,26 @@ h5
     margin-bottom: 30px;
     margin-right: 30px;
     min-width: 340px;
-    height: 125px;
-    box-shadow: 0px 3px 15px black;
+    height: 139px;
+    box-shadow: var(--shadow) 0px 5px 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
 }
 
+.box_pop:hover
+{
+    transform: scale(1.05);
+}
 .box_pop img
 {
-    height: 125px;
+    height: 139px;
     width: 40%;
     box-sizing: border-box;
     border-radius: 25px 0px 0px 25px;
     object-fit: cover;
 }
 
-.box_pop h4, p
+.box_pop h5, p
 {
     margin: 0;
     padding-left: 10px;
@@ -340,23 +378,25 @@ h5
 #activites
 {
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .activites_box
 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     align-items: flex-start;
+    cursor: pointer;
 }
 
 .activites_box img
 {
     height: 400px;
-    width: 280px;
+    width: 300px;
     box-sizing: border-box;
     border-radius: 25px 25px 0px 0px;
     object-fit: cover;
@@ -366,7 +406,13 @@ h5
 {
     background-color: white;
     border-radius: 25px 25px 25px 25px;
-    box-shadow: 0px 3px 15px black;
+    box-shadow: var(--shadow) 0px 5px 15px;
+    transition-duration: 0.3s;
+}
+
+.activites_box a:hover
+{
+    transform: scale(1.05);
 }
 
 .activites_box h4
@@ -394,4 +440,10 @@ h5
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-start;
+    padding-bottom: 10px;
+}
+
+.links_footer a:hover
+{
+    text-decoration: underline;
 }
