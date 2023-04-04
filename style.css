@@ -12,12 +12,16 @@
 
 body
 {
-    padding-left: 50px;
     margin: 0;
     padding: 0;
-    padding-left: 30px;
     border: 0;
+    text-decoration: none;
+    padding-left: 250px;
+    padding-right: 250px;
 }
+
+/*-----HEADER-----*/
+
 #logo
 {
     width: 60px;
@@ -181,6 +185,8 @@ h5
     font-weight: normal;
 }
 
+/*-----MAIN-----*/
+
 #hebergements
 {
     display: flex;
@@ -206,6 +212,12 @@ h5
     border-radius: 25px;
 }
 
+.filters a, #hebergements a, #activites a, footer a
+{
+    text-decoration: none;
+    color: black;
+}
+
 .conteneur
 {
     display: flex;
@@ -221,7 +233,7 @@ h5
     border: 1px solid white;
     border-radius: 25px;
     margin-bottom: 30px;
-    margin-right: 30px;
+    margin-right: 80px;
     min-width: 250px;
     height: 200px;
     box-shadow: 0px 3px 15px black;
@@ -323,4 +335,63 @@ h5
     justify-content: flex-start;
     flex-wrap: wrap;
     padding-left: 10px;
+}
+
+#activites
+{
+    margin-top: 100px;
+}
+
+.activites_box
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.activites_box img
+{
+    height: 400px;
+    width: 280px;
+    box-sizing: border-box;
+    border-radius: 25px 25px 0px 0px;
+    object-fit: cover;
+}
+
+.activites_box a
+{
+    background-color: white;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0px 3px 15px black;
+}
+
+.activites_box h4
+{
+    margin-left: 10px;
+}
+
+/*-----FOOTER-----*/
+
+.links_footer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--color-gris);
+}
+
+.links_footer li
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
 }
