@@ -27,7 +27,7 @@ body
     {
         margin: 0;
         padding: 0;
-        font-size: xx-large;
+        font-size: large;
     }
 }
 
@@ -250,8 +250,8 @@ h3
     #logo
     {
         display: flex;
-        height: 20%;
-        width: 20%;
+        height: 16%;
+        width: 16%;
         justify-content: center;
     }
 
@@ -278,7 +278,7 @@ h3
 
     #lien_header a
     {
-        font-size: xx-large;
+        font-size: large;
         padding: 2rem;
     }
 
@@ -304,7 +304,7 @@ h3
 
     .search_bar form
     {
-        height: 100px;
+        height: 70px;
         justify-content: center;
         padding-bottom: 50px;
     }
@@ -317,7 +317,7 @@ h3
     
     .search_bar span, input
     {
-        font-size: xx-large;
+        font-size: large;
     }
 
     .button_search
@@ -362,6 +362,7 @@ h3
         width: auto;
         margin-bottom: 30px;
         border-radius: 50px;
+        padding: 15px;
     }
 
     .filters a
@@ -372,12 +373,12 @@ h3
     .filters span
     {
         padding-right: 20px;
-        font-size: x-large;
+        font-size: medium;
     }
 
     .text_filters
     {
-        font-size: 50px;
+        font-size: x-large;
     }
 
     #information
@@ -784,6 +785,12 @@ h3
         height: auto;
     }
 
+    .box_pop article
+    {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
     .front_page
     {
         margin: 0px 50px 50px 50px;
@@ -953,6 +960,51 @@ h3
     margin-left: 10px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px)
+{
+    #activites
+    {
+        margin-top: 0px;
+        font-size: xx-small;
+        margin-bottom: 0;
+    }
+
+    #activites h1
+    {
+        padding-left: 30px;
+    }
+
+    .activites_box
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        cursor: pointer;
+        width: 100%;
+        align-items: center;
+    }
+
+    .activites_box a
+    {
+        object-fit: fill;
+        margin-bottom: 30px;
+        width: 300px;
+        box-shadow: var(--shadow) 0px 5px 15px;
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+
+    .activites_box img
+    {
+        height: 16rem;
+        object-fit: cover;
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+}
+
 @media screen and (max-width: 767px)
 {
     #activites
@@ -1022,6 +1074,14 @@ h3
 .links_footer a:hover
 {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px)
+{
+    .links_footer
+    {
+        font-size: 80%;
+    }
 }
 
 @media screen and (max-width: 767px)
