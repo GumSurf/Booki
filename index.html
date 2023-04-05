@@ -5,11 +5,14 @@
   <title>Mon Booki</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/c9432c048b.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
     <div id="header_top">
-        <img id="logo" src="images/logo/Booki.png" alt="Logo">
+        <div id="div_logo">
+            <img id="logo" src="images/logo/Booki.png" alt="Logo">
+        </div>
         <nav id="lien_header">
             <ul >
                 <li>
@@ -22,62 +25,67 @@
         </nav>
     </div>
     <!-- Séparation -->
-    <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-    <h3 id="titreh4">En plein centre-ville ou en pleine nature</h3>
-    <div class="search_bar">
-        <form>
-            <span class="box_icon">
-                <i class="fa-solid fa-location-dot fa-lg"></i>
+    <div class="title_filters">
+        <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+        <h3 id="titreh4">En plein centre-ville ou en pleine nature</h3>
+        <div class="search_bar">
+            <form>
+                <span class="box_icon">
+                    <i class="fa-solid fa-location-dot fa-lg"></i>
+                </span>
+                <input placeholder="Marseille, France" type="text" name="txtSearch required">
+                <button class="button_search" type="submit">
+                    <span>Rechercher</span>
+                </button>
+                <div class="loupe">
+                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                </div>
+            </form>
+        </div>
+        <div class="filters">
+            <p class="text_filters">Filtres</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>
+                            <i class="fa-sharp fa-solid fa-money-bill-1-wave fa-lg"></i>
+                        </span>
+                        <span>Économique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <i class="fa-solid fa-user fa-lg"></i>
+                        </span>
+                        <span>Familial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <i class="fa-sharp fa-solid fa-heart fa-lg"></i>
+                        </span>
+                        <span>Romantique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <i class="fa-solid fa-paw fa-lg"></i>
+                        </span>
+                        <span>Animaux autorisés</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h4 id="information">
+            <span>
+                <i class="fa-solid fa-info"></i>
             </span>
-            <input placeholder="Marseille, France" type="text" name="txtSearch required">
-            <button class="button_search" type="submit">
-                <span>Rechercher</span>
-            </button>
-        </form>
+            <span>Plus de 500 logements sont disponibles dans cette ville</span>
+        </h4>
     </div>
-    <div class="filters">
-        <span class="text_filters">Filtres</span>
-        <ul>
-            <li>
-                <a href="#">
-                    <span>
-                        <i class="fa-sharp fa-solid fa-money-bill-1-wave fa-lg"></i>
-                    </span>
-                    <span>Économique</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>
-                        <i class="fa-solid fa-user fa-lg"></i>
-                    </span>
-                    <span>Familial</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>
-                        <i class="fa-sharp fa-solid fa-heart fa-lg"></i>
-                    </span>
-                    <span>Romantique</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>
-                        <i class="fa-solid fa-paw fa-lg"></i>
-                    </span>
-                    <span>Animaux autorisés</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <h4 id="information">
-        <span>
-            <i class="fa-solid fa-info"></i>
-        </span>
-        <span>Plus de 500 logements sont disponibles dans cette ville</span>
-    </h4>
 </header>
     <main>
         <section id="hebergements">
