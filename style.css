@@ -72,7 +72,7 @@ body
 #lien_header a
 {
     font-weight: normal;
-    font-size: 22px;
+    font-size: medium;
     line-height: 19px;
     text-align: center;
     text-decoration: none;
@@ -183,7 +183,7 @@ h3
     background-color: white;
     justify-content: center;
     align-items: center;
-    border: 1px solid gray;
+    border: 1px solid var(--gris-fonce);
     border-radius: 50px;
     padding: 20px;
     transition-duration: 0.3s;
@@ -228,7 +228,7 @@ h3
     height: 25px;
     width: 25px;
     display: flex;
-    font-size: 0.6em;
+    font-size: 0.8em;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
@@ -295,7 +295,7 @@ h3
     border-radius: 25px;
     margin-bottom: 30px;
     width: 240px;
-    height: 200px;
+    height: auto;
     box-shadow: var(--shadow) 0px 5px 15px;
     transition-duration: 0.3s;
     cursor: pointer;
@@ -328,7 +328,7 @@ h3
     font-weight: normal;
 }
 
-.box span
+.stars
 {
     padding-left: 10px;
     color: var(--color);
@@ -338,6 +338,11 @@ h3
 {
     display: flex;
     margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+.euro
+{
     font-weight: bolder;
 }
 
@@ -379,8 +384,6 @@ h3
     border-radius: 25px;
     margin-bottom: 30px;
     margin-right: 30px;
-    /*min-width: 340px;*/
-    height: 139px;
     box-shadow: var(--shadow) 0px 5px 15px;
     transition-duration: 0.3s;
     cursor: pointer;
@@ -395,11 +398,18 @@ h3
     height: 139px;
     width: 40%;
     box-sizing: border-box;
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 1rem 0 0 1rem;
     object-fit: cover;
 }
 
-.box_pop h5, p
+.box_pop h5
+{
+    padding-top: 15px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.box_pop p
 {
     margin: 0;
     padding-left: 10px;
@@ -410,12 +420,6 @@ h3
 {
     font-size: 0.8em;
     font-weight: normal;
-}
-
-.box_pop span
-{
-    padding-left: 10px;
-    color: var(--color);
 }
 
 .box_pop a
@@ -470,9 +474,12 @@ h3
     transform: scale(1.05);
 }
 
-.activites_box h4
+.title_activites h4
 {
-    margin-left: 10px;
+    text-align: left;
+    padding: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 /******FOOTER******/
@@ -497,7 +504,7 @@ h3
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-start;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .links_footer a:hover
@@ -514,127 +521,57 @@ h3
 {
     body
     {
-        margin: 0;
-        padding: 0;
-        font-size: large;
+        margin-right: auto;
+        margin-left: auto;
+        width: 1024px;
+        font-size: medium;
     }
 
     /******Header******/
 
-    #header_top
-    {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #div_logo
-    {
-        display: flex;
-        justify-content: center;
-    }
-
     #logo
     {
+        margin-left: 20px;
         display: flex;
-        height: 16%;
-        width: 16%;
-        justify-content: center;
-    }
-
-
-    #lien_header ul
-    {
+        height: 24px;
         width: auto;
-    }
-
-    #lien_header li
-    {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-right: 0px;
-        justify-content: space-around;
-    }
-
-    #lien_header li:hover
-    {
-        border-bottom: 2px solid var(--color);
-        border-top: 0px;
+        justify-content: center;
     }
 
     #lien_header a
     {
-        font-size: large;
-        padding: 2rem;
-    }
-
-    ul
-    {
-        padding-inline-start: 0px;
+        font-size: small;
     }
 
     /******Main******/
 
     .title_filters
     {
-        padding: 0px 100px 100px 100px;
+        margin-top: 60px;
+        font-size: small;
     }
 
     .title_filters h2
     {
-        margin: 0;
+        margin-bottom: 8px;
     }
 
     .title_filters h3
     {
         margin-top: 0;
+        margin-bottom: 35px;
     }
 
-    .search_bar form
+    .search_bar input
     {
-        height: 70px;
-        justify-content: center;
-        padding-bottom: 50px;
+        width: 215px;
+        font-size: medium;
     }
 
-    .box_icon
-    {
-        height: auto;
-        width: 130px;
-    }
-    
-    .search_bar span, input
-    {
-        font-size: large;
-    }
-
-    .button_search
-    {
-        display: none;
-    }
-
-    .loupe
-    {
-        display: flex;
-        height: auto;
-        width: 170px;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background-color: var(--color);
-        border-radius: 0px 30px 30px 0px;
-        border: 1px solid var(--color);
-        font-weight: bolder;
-        transition-duration: 0.3s;
-        cursor: pointer;
-    }
-    
     /******Filters******/
 
     .filters
     {
-        height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -642,39 +579,12 @@ h3
 
     .filters ul
     {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .filters li
-    {
-        height: 7%;
-        width: auto;
-        margin-bottom: 30px;
-        border-radius: 50px;
-        padding: 15px;
-    }
-
-    .filters a
-    {
-        display: flex;
-    }
-    
-    .filters span
-    {
-        padding-right: 20px;
-        font-size: medium;
+        padding-inline-start: 0px;
     }
 
     .text_filters
     {
-        font-size: x-large;
-    }
-
-    #information
-    {
-        margin: 0;
+        font-size: medium;
     }
 
     /******Hebergements******/
@@ -683,133 +593,89 @@ h3
     {
         display: flex;
         flex-flow: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-direction: column-reverse;
-    }
-
-    .right_page
-    {
-        margin: 0px 50px 50px 50px;
-    }
-
-    .conteneur_popularite
-    {
-        align-items: center;
-    }
-
-    .box_pop
-    {
-        display: flex;
-        object-fit: fill;
-        padding: 3px;
-        background-color: white;
-        border: 1px solid white;
-        border-radius: 25px;
-        margin-bottom: 30px;
-        margin-right: 30px;
-        width: 90%;
-        height: auto;
-        box-shadow: var(--shadow) 0px 5px 15px;
-        transition-duration: 0.3s;
-        cursor: pointer;
-    }
-
-    .box_pop img
-    {
-        height: auto;
-    }
-
-    .box_pop article
-    {
         flex-direction: column;
-        justify-content: space-around;
     }
 
     .front_page
     {
-        margin: 0px 50px 50px 50px;
-        width: 90%;
-        padding-left: 0;
+        max-width: 100%;
+        width: auto;
+        margin-bottom: 50px;
     }
 
     .front_page h3, .aff_plus
     {
-        padding-left: 30px;
+        font-size: large;
     }
 
     .conteneur
     {
-        justify-content: space-around;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+
+    .name_price_hebergements h5, p
+    {
+        padding-bottom: 8px;
     }
 
     .box
     {
-        height: auto;
-        width: 40%;
-        margin-right: 0;
+        width: 260px;
     }
 
-    .box img
+    /******Popularite******/
+
+    .box_pop
     {
-        height: 18rem;
-        object-fit: cover;
-        max-width: 100%;
-        width: 100%;
-        max-height: 100%;
-        border-radius: 1rem 1rem 0 0;
+        width: 270px;
     }
 
+    .name_price_populaires h5, p, span
+    {
+        font-size: 0.8rem;
+    }
+
+    .conteneur_popularite
+    {
+        flex-direction: row;
+    }
     /******Activites******/
-
-    #activites
-    {
-        margin-top: 0px;
-        font-size: xx-small;
-        margin-bottom: 0;
-    }
-
-    #activites h1
-    {
-        padding-left: 30px;
-    }
-
-    .activites_box
-    {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        cursor: pointer;
-        width: 100%;
-        align-items: center;
-    }
 
     .activites_box a
     {
-        object-fit: fill;
-        margin-bottom: 30px;
-        width: 300px;
-        box-shadow: var(--shadow) 0px 5px 15px;
-        transition-duration: 0.3s;
-        cursor: pointer;
+        width: 200px;
+        font-size: small;
     }
 
     .activites_box img
     {
-        height: 16rem;
-        object-fit: cover;
-        max-width: 100%;
-        width: 100%;
-        max-height: 100%;
-        border-radius: 1rem 1rem 0 0;
+        height: 200px;
+        width: 200px;
     }
 
     /******Footer******/
 
-    .links_footer
+    /*.links_footer
     {
         font-size: 80%;
     }
+*/
+    .links_footer ul
+    {
+        padding-right: 4em;
+    }
+
+    .links_footer h4
+    {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+/*
+    .long_title h4
+    {
+        padding: 12px;
+    }*/
 }
 
 /* Small devices (phones, less than 768px) */
@@ -818,8 +684,11 @@ h3
 {
     body
     {
-        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0;
         padding: 0;
+        width: 375px;
         font-size: medium;
     }
 
@@ -840,11 +709,16 @@ h3
 
     #logo
     {
-        display: flex;
+        height: auto;
+        width: 60px;
+        text-align: center;
+        padding: 30px 0 10px 0;
+        margin-left: 0;
+        /*display: flex;
         height: 20%;
         width: 20%;
         justify-content: center;
-        padding: 45px 0 20px 0px;
+        padding: 45px 0 20px 0px;*/
     }
 
 
@@ -871,7 +745,7 @@ h3
     #lien_header a
     {
         font-size: x-small;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     ul
@@ -881,15 +755,22 @@ h3
 
     /******Main******/
 
+    main
+    {
+        padding-left: 0;
+    }
+
     .title_filters
     {
-        padding: 0px 30px 30px 30px;
+        margin-top: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .title_filters h2
     {
         margin: 0;
-        font-size: small;
+        font-size: large;
     }
 
     .title_filters h3
@@ -910,7 +791,14 @@ h3
         height: auto;
         width: 1rem;
     }
-    
+
+    .search_bar
+    {
+        height: 60px;
+        border: 1px solid var(--color-gris);
+        border-radius: 30px 30px 30px 30px;
+    }
+
     .search_bar span, input
     {
         font-size: x-small;
@@ -924,6 +812,7 @@ h3
     .search_bar input
     {
         width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0);
     }
 
     .button_search
@@ -934,15 +823,13 @@ h3
     .loupe
     {
         display: flex;
-        height: auto;
         width: 30%;
         justify-content: center;
         align-items: center;
         color: white;
         background-color: var(--color);
-        border-radius: 0px 30px 30px 0px;
+        border-radius: 15px 15px 15px 15px;
         border: 1px solid var(--color);
-        font-weight: bolder;
         transition-duration: 0.3s;
         cursor: pointer;
     }
@@ -960,54 +847,34 @@ h3
     .filters ul
     {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .filters li
     {
         height: auto;
-        width: auto;
+        width: 135px;
         margin-bottom: 10px;
+        margin-right: 10px;
         border-radius: 30px;
         padding: 10px;
-    }
-
-    .filters a
-    {
-        display: flex;
     }
     
     .filters span
     {
-        padding-right: 20px;
-        font-size: x-small;
+        font-size: xx-small;
     }
 
-    .text_filters
+    #information>span:first-child
     {
-        font-size: small;
-    }
-
-    #information
-    {
-        margin: 0;
-        font-size: x-small;
-    }
-
-    #information span:first-child
-    {
-        height: 1rem;
-        width: 1.3rem;
+        width: 35px;
     }
 
     #information>span:last-child
     {
-        font-size: xx-small;
-        width: auto;
         margin-left: 10px;
     }
-
     /******Hebergements******/
 
     #hebergements
@@ -1017,22 +884,37 @@ h3
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column-reverse;
+        padding-left: 0;
     }
+
+    
 
     .right_page
     {
-        margin: 0px 50px 50px 50px;
-        font-size: x-small;
-        width: 70%;
+        margin-right: 0px;
+        border-radius: 0%;
     }
 
     .conteneur_popularite
     {
-        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .conteneur_popularite p
+    {
+        font-size: 0.7rem;
+    }
+
+    h3
+    {
+        margin-bottom: 15px;
     }
 
     .box_pop
     {
+        width: 335px;
+    }
+        /*
         display: flex;
         object-fit: fill;
         padding: 3px;
@@ -1059,34 +941,37 @@ h3
         flex-direction: column;
         justify-content: space-between;
     }
-
+*/
     .front_page
     {
-        margin: 0px 50px 50px 50px;
-        width: 80%;
+        width: 375px;
+        margin-left: 20px;
+        margin-right: 20px;
         padding-left: 0;
+        margin-right: 0;
         font-size: x-small;
+        background-color: white;
     }
 
+/*
     .front_page h3, .aff_plus
     {
         padding-left: 30px;
     }
+    */
 
     .conteneur
     {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 20px;
     }
 
     .box
     {
-        height: auto;
-        width: 70%;
-        margin-right: 0;
+        width: 335px;
     }
 
-    .box img
+/*    .box img
     {
         height: 9rem;
         object-fit: cover;
@@ -1094,6 +979,21 @@ h3
         width: 100%;
         max-height: 100%;
         border-radius: 1rem 1rem 0 0;
+    }
+*/
+    .aff_plus
+    {
+        font-size: 0.9rem;
+    }
+
+    .name_price_hebergements h5
+    {
+        font-size: 1em;
+    }
+
+    .name_price_hebergements p
+    {
+        font-size: 0.7rem;
     }
 
     /******Activites******/
