@@ -21,11 +21,16 @@ body
     padding: 0;
     border: 0;
     text-decoration: none;
-    padding-left: 30px;
-    padding-right: 50px;
+    /*padding-left: 30px;
+    padding-right: 50px;*/
 }
 
 /******HEADER******/
+
+header
+{
+    padding-left: 30px;
+}
 
 #logo
 {
@@ -56,7 +61,7 @@ body
     height: 98%;
     display: flex;
     align-items: center;
-    margin-right: 60px;
+    margin-right: 50px;
 }
 
 #lien_header li:hover
@@ -83,7 +88,8 @@ body
 
 main, footer
 {
-    padding-left: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 h3
@@ -349,7 +355,6 @@ h3
 .right_page
 {
     width: auto;
-    margin-right: 20px;
     height: auto;
 }
 
@@ -444,6 +449,7 @@ h3
 
 .activites_box
 {
+    gap: 30px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -452,7 +458,7 @@ h3
 .activites_box img
 {
     height: 380px;
-    width: 314px;
+    width: 298px;
     box-sizing: border-box;
     border-radius: 25px 25px 0px 0px;
     object-fit: cover;
@@ -526,9 +532,14 @@ h3
 
     /******Header******/
 
+    header
+    {
+        padding-left: 0px;
+    }
+
     #logo
     {
-        margin-left: 20px;
+        margin-left: 50px;
         display: flex;
         height: 24px;
         width: auto;
@@ -597,6 +608,7 @@ h3
     {
         max-width: 100%;
         width: auto;
+        margin-right: 0px;
         margin-bottom: 50px;
     }
 
@@ -623,6 +635,12 @@ h3
 
     /******Popularite******/
 
+    .right_page
+    {
+        height: 252px;
+        width: 894px;
+    }
+
     .box_pop
     {
         width: 270px;
@@ -648,7 +666,7 @@ h3
     .activites_box img
     {
         height: 200px;
-        width: 200px;
+        width: 193.5px;
     }
 
     /******Footer******/
@@ -741,6 +759,7 @@ h3
     main
     {
         padding-left: 0;
+        padding-right: 0;
     }
 
     .title_filters
@@ -872,10 +891,17 @@ h3
 
     .right_page
     {
-        margin-right: 0px;
+        width: 355px;
+        height: auto;
+
         border-radius: 0%;
     }
 
+    .right_page, .front_page
+    {
+        padding-left: 20px;
+    }
+    
     .conteneur_popularite
     {
         flex-wrap: wrap;
@@ -888,6 +914,7 @@ h3
 
     h3
     {
+        padding-left: 10px;
         margin-bottom: 15px;
     }
 
@@ -898,10 +925,7 @@ h3
 
     .front_page
     {
-        width: 375px;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-left: 0;
+        width: 355px;
         margin-right: 0;
         font-size: x-small;
         background-color: white;
@@ -920,6 +944,7 @@ h3
 
     .aff_plus
     {
+        padding-left: 10px;
         font-size: 0.9rem;
     }
 
@@ -976,13 +1001,14 @@ h3
     {
         margin-top: 50px;
         padding-left: 0px;
+        padding-right: 0px;
     }
 
     .links_footer
     {
-        font-size: 50%;
+        width: 375px;
         flex-direction: column;
-        font-size: xx-small;
+        font-size: x-small;
     }
 
     .links_footer h4
