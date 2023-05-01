@@ -396,14 +396,6 @@ h3
 {
     transform: scale(1.05);
 }
-.box_pop img
-{
-    height: 139px;
-    width: 40%;
-    box-sizing: border-box;
-    border-radius: 1rem 0 0 1rem;
-    object-fit: cover;
-}
 
 .box_pop h5
 {
@@ -439,6 +431,22 @@ h3
     justify-content: flex-start;
     flex-wrap: wrap;
     padding-left: 10px;
+    width: 226px;
+}
+
+.contenu_image
+{
+    height: 139px;
+    width: 123px;
+}
+
+.contenu_image img
+{
+    height: 139px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1rem 0 0 1rem;
+    object-fit: cover;
 }
 
 /******Activites******/
@@ -652,12 +660,7 @@ h3
 
     .box_pop
     {
-        width: 270px;
-    }
-
-    .box_pop img
-    {
-        height: auto;
+        width: 29%;
     }
 
     .name_price_populaires h5, p, span
@@ -871,12 +874,13 @@ h3
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .filters li
     {
         height: auto;
-        width: 108px;
+        width: 38%;
         margin-bottom: 10px;
         margin-right: 10px;
         border-radius: 30px;
@@ -901,12 +905,9 @@ h3
 
     #hebergements
     {
-        display: flex;
-        flex-flow: row;
+        width: 99%;
         align-items: center;
-        flex-wrap: nowrap;
         flex-direction: column-reverse;
-        padding-left: 0;
     }
 
     .right_page
@@ -940,13 +941,12 @@ h3
 
     .box_pop
     {
-        width: 100%;
+        width: 95%;
     }
 
     .box_pop img
     {
         height: 139px;
-        width: 30%;
     }
 
     .box_pop article
@@ -1014,18 +1014,12 @@ h3
     {
         object-fit: fill;
         margin-bottom: 15px;
-        width: 315px;
-        box-shadow: var(--shadow) 0px 5px 15px;
-        transition-duration: 0.3s;
-        cursor: pointer;
+        width: 100%;
     }
 
     .activites_box img
     {
         height: 141px;
-        object-fit: cover;
-        width: 315px;
-        border-radius: 1rem 1rem 0 0;
     }
 
     /******Footer******/
